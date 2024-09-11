@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+a {
+  text-decoration: none !important;
+}
+
+.logo {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.nav-link {
+  background: inherit;
+  color: inherit;
+}
+
+.nav-link-active {
+  background: rgb(231, 254, 253) !important;
+  color: #09bc8a;
+}
+
+.tableChild:nth-child(odd) {
+  color: #ffffff;
+}
+.tableChild:nth-child(even) {
+  color: #000000;
+}
+
+/* styles.css */
+
+/* Web-specific styles */
+.app-container {
+  padding: 20px;
+  background-color: #fdfffc;
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+}
+.print-title {
+  display: none !important;
+}
+.print-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.print-container {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fdfffc;
+  border: 1px solid #ccc;
+}
+
+.print-header h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+.print-body p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Print-specific styles */
+@media print {
+  .app-container {
+    display: none;
+  }
+  .print-title {
+    display: flex !important;
+  }
+  .print-container {
+    padding: 50px;
+    width: 100% !important;
+    background-color: #fdfffc;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #000;
+  }
+
+  .print-header h1 {
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .print-body p {
+    color: #000;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .print-button {
+    display: none;
+  }
+
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .print-table th,
+  .print-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .print-table th {
+    background-color: #f2f2f2;
+  }
+
+  .print-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+}
